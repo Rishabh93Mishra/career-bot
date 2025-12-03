@@ -1,0 +1,284 @@
+/* ======== GENERAL STYLES ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ======== HEADER ======== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #003366;
+  color: white;
+  padding: 12px 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#theme-toggle {
+  background: white;
+  color: #003366;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background: #ffcc00;
+}
+
+/* ======== HERO SECTION ======== */
+.hero {
+  background: linear-gradient(135deg, #003366, #0055aa);
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  background: #ffd700;
+  color: #003366;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cta-btn:hover {
+  background: #ffcc00;
+}
+
+/* ======== SERVICES ======== */
+.services {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.services h2 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ======== COLLEGES ======== */
+.colleges {
+  background: #eef3f8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.college-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.college-card {
+  background: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ======== CONTACT ======== */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+}
+
+form button {
+  background: #003366;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+form button:hover {
+  background: #0055aa;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* ======== LOGIN / SIGNUP / FORGOT ======== */
+.login-body {
+  background: linear-gradient(135deg, #1e90ff, #00bfff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container, .signup-container, .forgot-container {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 300px;
+}
+
+.login-container h2,
+.signup-container h2,
+.forgot-container h2 {
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.login-container input,
+.signup-container input,
+.forgot-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-container button,
+.signup-container button,
+.forgot-container button {
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-container button:hover,
+.signup-container button:hover,
+.forgot-container button:hover {
+  background: #0055aa;
+}
+
+.login-container a,
+.signup-container a,
+.forgot-container a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-container a:hover,
+.signup-container a:hover,
+.forgot-container a:hover {
+  text-decoration: underline;
+}
+
+/* ======== DARK MODE ======== */
+body.dark-mode {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode header {
+  background: #0a0a0a;
+}
+
+body.dark-mode .card,
+body.dark-mode .college-card,
+body.dark-mode form,
+body.dark-mode footer {
+  background: #1e1e1e;
+  color: #f1f1f1;
+  box-shadow: none;
+}

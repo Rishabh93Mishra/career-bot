@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Stop Education Advisor - VIDYA MARG</title>
+
+  <!-- Correct Flask Static CSS -->
+  <link rel="stylesheet" href="/static/project.css">
+</head>
+<body>
+
+  <!-- LOGIN / SIGNUP / FORGOT -->
+  <div class="login-body" id="authPage">
+
+    <!-- LOGIN BOX -->
+    <div class="login-container" id="loginBox">
+      <h2>🎓 VIDYA MARG</h2>
+      <p>Login to access your education dashboard</p>
+
+      <input type="text" id="username" placeholder="Enter your email" />
+      <input type="password" id="password" placeholder="Enter your password" />
+      <button onclick="login()">Login</button>
+
+      <p><a href="#" onclick="openForgot()">Forgot Password?</a></p>
+      <p>Don't have an account? <a href="#" onclick="openSignup()">Create Account</a></p>
+
+      <p id="message"></p>
+    </div>
+
+    <!-- SIGNUP BOX -->
+    <div class="signup-container" id="signupBox" style="display:none;">
+      <h2>📝 Create Account</h2>
+
+      <input type="text" id="signupName" placeholder="Full Name" />
+      <input type="email" id="signupEmail" placeholder="Email" />
+      <input type="password" id="signupPassword" placeholder="Create Password" />
+
+      <button onclick="signup()">Sign Up</button>
+      <p>Already have an account? <a href="#" onclick="showLogin()">Back to Login</a></p>
+
+      <p id="signupMessage"></p>
+    </div>
+
+    <!-- FORGOT PASSWORD BOX -->
+    <div class="forgot-container" id="forgotBox" style="display:none;">
+      <h2>🔐 Forgot Password</h2>
+
+      <input type="email" id="resetEmail" placeholder="Enter your registered email" />
+      <button onclick="resetPassword()">Send Reset Link</button>
+
+      <p><a href="#" onclick="showLogin()">Back to Login</a></p>
+      <p id="resetMessage"></p>
+    </div>
+
+  </div>
+
+  <!-- MAIN PAGE -->
+  <div id="mainPage" style="display:none;">
+
+    <header>
+      <div class="logo">🎓 VIDYA MARG</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#colleges">Colleges</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle">🌙</button>
+    </header>
+
+    <section id="home" class="hero">
+      <h1>Your Path to the Perfect Education Starts Here</h1>
+      <p>Explore courses, find top colleges, and get expert career advice — all in one place.</p>
+      <button class="cta-btn">Get Started</button>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="service-container">
+
+        <div class="card">
+          <h3>🎯 Career Guidance</h3>
+          <img src="/static/carrer.jpg" width="177" height="172">
+          <p>Get personalized career counseling from education experts.</p>
+        </div>
+
+        <div class="card">
+          <h3>🏫 College Finder</h3>
+          <img src="/static/coll.jpg" width="177" height="172">
+          <p>Search top colleges based on your stream, budget, and location.</p>
+        </div>
+
+        <div class="card">
+          <h3>📚 Skill Development</h3>
+          <img src="/static/skill.png" width="177" height="172">
+          <p>Take online courses to strengthen your knowledge and employability.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="colleges">
+      <h2>Featured Colleges</h2>
+      <div class="college-list">
+        <div class="college-card">IIT Delhi</div>
+        <div class="college-card">IIM Bangalore</div>
+        <div class="college-card">BITS Pilani</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="messageText" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 One Stop Education Advisor | Designed by Rishabh Mishra</p>
+    </footer>
+
+  </div>
+
+  <!-- Correct Flask Static JS -->
+  <script src="/static/project.js"></script>
+
+</body>
+</html>
