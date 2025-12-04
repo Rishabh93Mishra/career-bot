@@ -1,4 +1,6 @@
 Flask
-mysql-connector-python
-googletrans==4.0.0-rc1
 Flask-Cors
+googletrans==4.0.0-rc1
+mysql-connector-python
+deep-translator
+gunicorn==21.2.0
