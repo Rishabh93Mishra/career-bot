@@ -1,4 +1,5 @@
-const BASE_URL = "http://127.0.0.1:5000";
+// BACKEND URL (Render)
+const BASE_URL = "https://career-bot-kjni.onrender.com";
 
 // LOGIN
 async function login() {
@@ -46,22 +47,25 @@ async function signup() {
 
   setTimeout(() => showLogin(), 1500);
 }
+
+// LOAD COURSES
 function loadCourses() {
-    fetch("http://127.0.0.1:5000/courses")
+  fetch("https://career-bot-kjni.onrender.com/courses")
+
     .then(res => res.json())
     .then(data => {
-        let container = document.querySelector(".college-list");
-        container.innerHTML = "";
+      let container = document.querySelector(".college-list");
+      container.innerHTML = "";
 
-        data.forEach(c => {
-            container.innerHTML += `
-                <div class="college-card">
-                    <h3>${c.course_name}</h3>
-                    <p>Eligibility: ${c.eligibility}</p>
-                    <p>Duration: ${c.duration}</p>
-                    <p>Cost: ${c.cost}</p>
-                </div>
-            `;
-        });
+      data.forEach(c => {
+        container.innerHTML += `
+          <div class="college-card">
+            <h3>${c.course_name}</h3>
+            <p>Eligibility: ${c.eligibility}</p>
+            <p>Duration: ${c.duration}</p>
+            <p>Cost: ${c.cost}</p>
+          </div>
+        `;
+      });
     });
 }

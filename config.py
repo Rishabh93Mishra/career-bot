@@ -1,9 +1,8 @@
-import mysql.connector
+DB_CONFIG = {
+    'host': "bd27lkuu8i4kogikfal-mysql.services.clever-cloud.com",
+    'user': "uwubzwymacmo0ji",
+    'password': "Rishabh*1",
+    'database': "bd27lkuu8i4kogikfal",
+    'port': 3306
+}
 
-def get_db():
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",               # change to your MySQL username
-        password="yourpassword",   # change to your MySQL password
-        database="career_bot"      # change if database name is different
-    )
